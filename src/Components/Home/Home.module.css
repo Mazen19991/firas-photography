@@ -1,0 +1,80 @@
+.Container {
+  height: 100%;
+  background-color: #f7f5f1;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+  height: 100vh;
+  z-index: 0;
+  position: relative;
+  
+}
+
+.LeftContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-left: 9%;
+}
+
+.TiltedText {
+  font-family: Sarabun;
+  writing-mode: vertical-rl;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+  transform: rotate(180deg);
+}
+
+.NameContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 4rem;
+  margin-left: 3rem;
+}
+
+.Name {
+  font-size: 6.5rem;
+  font-family: Sarabun;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+.ContactButton {
+  margin-top: 1rem;
+  margin-left: 4;
+  width: 37.5%;
+  padding: 0.75rem;
+  border-radius: 2.5rem 2.5rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Sarabun;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 700;
+}
+
+.ContactButtonText {
+  font-size: 1.2rem;
+  font-family: Sarabun;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 700;
+  color: #F7F5F1;
+  margin: 0;
+}
+
+.RightContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
