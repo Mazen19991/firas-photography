@@ -52,7 +52,7 @@ function LinkTab(props: LinkTabProps) {
         maxWidth: "unset", // Ensure no minimum width
         maxHeight: "unset", // Ensure no minimum height
         "&.MuiTab-root": {
-          padding: 0.3, //Additional style for certain versions of Material-UI
+          padding: "0.5rem", //Additional style for certain versions of Material-UI
         },
       }}
       onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
