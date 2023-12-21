@@ -5,6 +5,7 @@
   grid-template-columns: 1fr 1fr; /* Two columns with equal width */
   z-index: 0;
   position: relative;
+  overflow: hidden;
 }
 
 .LeftContainer {
@@ -85,13 +86,10 @@
   display: flex;
   overflow: hidden;
   width: 70%;
-  height: 90%;
-}
-.ImageContainer img {
-  /* transition: transform 0.5s ease-in-out; */
+  height: 80%;
 }
 
-.IconContainer{
+.IconContainer {
   margin-right: 1rem;
   display: flex;
   flex-direction: column;
@@ -99,12 +97,26 @@
 }
 
 .IconLink {
-  text-decoration: none; /* Remove underline */
-  color: black; /* Inherit text color */
+  text-decoration: none;
+  color: black;
 }
 
 .IconLink:hover,
 .IconLink:active,
 .IconLink:visited {
-  color: black; /* Inherit text color */
+  color: black;
+}
+
+.WatermarkContainer {
+  display: flex;
+  position: absolute;
+  justify-content: left;
+  z-index: -1;
+  top: -5%;
+  right: 0%;
+}
+
+.WatermarkContainer img{
+  margin: 0;
+  padding: 0;
 }
