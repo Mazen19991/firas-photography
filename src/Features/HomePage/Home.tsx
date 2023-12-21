@@ -7,9 +7,12 @@ import Header from "../../Components/Layout/Header";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { Fade, Slide } from "@mui/material";
+import { exit } from "process";
 
 const Home: FC = () => {
   const [change, setChange] = useState(false);
+  const imageTransition = React.useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -20,7 +23,7 @@ const Home: FC = () => {
       setTimeout(() => {
         setChange(false);
       }, 10000);
-    }, 30000);
+    }, 20000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -32,67 +35,123 @@ const Home: FC = () => {
         <div className={homeStyle.LeftContainer}>
           <p className={homeStyle.TiltedText}>ONLINE PORTFOLIO</p>
           <div className={homeStyle.NameContainer}>
-            <h1 className={homeStyle.Name}>
-              {!change ? (
-                <>
-                  Firas <br /> Bou Hatoum
-                </>
-              ) : (
-                <>
-                  About <br /> Me
-                </>
-              )}
-            </h1>
+            <Fade in={!change} timeout={500} unmountOnExit>
+              <h1 className={homeStyle.Name}>
+                {!change && (
+                  <>
+                    Firas <br /> Bou Hatoum
+                  </>
+                )}
+              </h1>
+            </Fade>
+            <Fade in={change} timeout={500} unmountOnExit>
+              <h1 className={homeStyle.Name}>
+                {change && (
+                  <>
+                    About <br /> Me
+                  </>
+                )}
+              </h1>
+            </Fade>
             <div className={homeStyle.buttonContainer}>
-              {!change ? (
-                <button className={homeStyle.ContactButton}>
-                  <p className={homeStyle.ContactButtonText}>Contact me</p>
-                </button>
-              ) : (
-                <p className={homeStyle.TextElement}>
-                  Your Text Here - About Me Description...Your Text Here - About
-                  Me Description...Your Text Here - About Me Description...Your
-                  Text Here - About Me Description...Your Text Here - About Me
-                  Description...Your Text Here - About Me Description...Your
-                  Text Here - About Me Description...Your Text Here - About Me
-                  Description...Your Text Here - About Me Description...Your
-                  Text Here - About Me Description...Your Text Here - About Me
-                  Description...Your Text Here - About Me Description...Your
-                  Text Here - About Me Description...
-                </p>
-              )}
+              <Fade in={!change} timeout={500} unmountOnExit>
+                <div>
+                  {!change && (
+                    <button className={homeStyle.ContactButton}>
+                      <p className={homeStyle.ContactButtonText}>Contact me</p>
+                    </button>
+                  )}
+                </div>
+              </Fade>
+              <Fade in={change} timeout={500} unmountOnExit>
+                <div>
+                  {change && (
+                    <p className={homeStyle.TextElement}>
+                      Your Text Here - About Me Description...Your Text Here -
+                      About Me Description...Your Text Here - About Me
+                      Description...Your Text Here - About Me Description...Your
+                      Text Here - About Me Description...Your Text Here - About
+                      Me Description...Your Text Here - About Me
+                      Description...Your Text Here - About Me Description...Your
+                      Text Here - About Me Description...Your Text Here - About
+                      Me Description...Your Text Here - About Me
+                      Description...Your Text Here - About Me Description...Your
+                      Text Here - About Me Description...
+                    </p>
+                  )}
+                </div>
+              </Fade>
             </div>
           </div>
         </div>
         <div className={homeStyle.RightContainer}>
-          <div className={homeStyle.ImageContainer}>
-            <img
-              src={Picture1}
-              alt="Firas Bou Hatoum"
-              style={{
-                transform: change ? "translateX(-100%)" : "translateX(0)",
-                backgroundSize: "cover",
-                maxWidth: "100%",
-                width: "auto",
-                height: "auto",
-              }}
-            />
-            <img
-              src={Picture2}
-              alt="Firas Bou Hatoum"
-              style={{
-                transform: change ? "translateX(-100%)" : "translateX(0)",
-                backgroundSize: "cover",
-                maxWidth: "100%",
-                width: "auto",
-                height: "auto",
-              }}
-            />
+          <div className={homeStyle.ImageContainer} ref={imageTransition}>
+            {!change && (
+              <Slide
+                container={imageTransition.current}
+                in={!change}
+                direction="right"
+                timeout={{ enter: 500, appear: 500, exit: 500 }}
+              >
+                <img
+                  src={Picture1}
+                  alt="Firas Bou Hatoum"
+                  style={{
+                    // transform: change ? "translateX(-100%)" : "translateX(0)",
+                    backgroundSize: "cover",
+                    maxWidth: "100%",
+                    width: "auto",
+                    height: "auto",
+                  }}
+                />
+              </Slide>
+            )}
+            {change && (
+              <Slide
+                container={imageTransition.current}
+                in={change}
+                direction="left"
+                timeout={{ enter: 500, appear: 500, exit: 500 }}
+              >
+                <img
+                  src={Picture2}
+                  alt="Firas Bou Hatoum"
+                  style={{
+                    // transform: change ? "translateX(-100%)" : "translateX(0)",
+                    backgroundSize: "cover",
+                    maxWidth: "100%",
+                    width: "auto",
+                    height: "auto",
+                  }}
+                />
+              </Slide>
+            )}
           </div>
           <div className={homeStyle.IconContainer}>
-            <FacebookIcon sx={{}} />
-            <TwitterIcon />
-            <InstagramIcon />
+            <a
+              href="https://www.facebook.com"
+              className={homeStyle.IconLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FacebookIcon />
+            </a>
+            <a
+              href="https://twitter.com"
+              className={homeStyle.IconLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TwitterIcon />
+            </a>
+            <a
+              href="https://www.instagram.com"
+              className={homeStyle.IconLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <InstagramIcon />
+            </a>
           </div>
         </div>
       </div>

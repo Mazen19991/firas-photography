@@ -4,5 +4,5 @@
     height: inherit;
     width: inherit;
     background-color: #F7F5F1;
-    overflow: -moz-hidden-unscrollable;
+    overflow: scroll;
 }
