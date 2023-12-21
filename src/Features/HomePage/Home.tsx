@@ -1,7 +1,7 @@
 // Home.tsx
 import React, { FC, useState, useEffect } from "react";
 import Picture1 from "../../Assets/Firas.png";
-import Picture2 from "../../Assets/AP7A3524.jpg";
+import Picture2 from "../../Assets/Website Images/AP7A3524.jpg";
 import Watermark1 from "../../Assets/Watermark.svg";
 import Watermark2 from "../../Assets/Watermark2.svg";
 import homeStyle from "./Home.module.css";
@@ -10,6 +10,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { Fade, Slide } from "@mui/material";
+import Portfolio from "../Portfolio";
 
 const Home: FC = () => {
   const [change, setChange] = useState(false);
@@ -156,10 +157,11 @@ const Home: FC = () => {
           </div>
         </div>
         <div className={homeStyle.WatermarkContainer}>
-          <img src={Watermark1} style={{width:"50rem",}}/>
-          <img src={Watermark2} style={{width:"50rem",}}/>
+          <img src={Watermark1} style={{width:"50rem",}} alt="Firas Watermark1"/>
+          <img src={Watermark2} style={{width:"50rem",}} alt="Firas Watermark2"/>
         </div>
       </div>
+      <Portfolio/>
     </>
   );
 };
