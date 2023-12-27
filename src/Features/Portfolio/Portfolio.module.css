@@ -1,0 +1,48 @@
+.Container {
+  height: 87.5%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "sarabun";
+}
+
+.titleContainer p {
+  color: #f7f5f1;
+  font-weight: 400;
+  font-size: 24.518px;
+  line-height: normal;
+  margin: 0;
+}
+
+.subTitleContainer h1 {
+  margin: 0;
+  font-weight: 700;
+  line-height: normal;
+  color: #f7f5f1;
+}
+
+.carouselContainer {
+    background-size: cover;
+    overflow: hidden;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.buttonContainer button {
+  background-color: black;
+  color: #f7f5f1;
+  border-color: #f7f5f1;
+  border-radius: 2.5rem 2.5rem;
+  padding: 1rem 4rem;
+  font-weight: 400;
+  font-size: 24.518px;
+  line-height: normal;
+}
