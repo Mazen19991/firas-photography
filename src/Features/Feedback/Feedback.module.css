@@ -38,19 +38,26 @@
   z-index: 2;
 }
 .FeedbackContainer {
-  width: 50%;
+  width: 100%;
+  height: 67.5%;
   margin: 0;
-  
 }
 .FeedbackTextContainer {
   background-color: rgb(247, 245, 241);
-  padding: 1rem 1rem;
+  width: 70%;
+  height: 75%;
   font-family: Sarabun;
   font-size: 14 px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.FeedbackTextContainer p {
+  width: 90%;
 }
 .FeedbackButtonContainer {
   display: flex;
@@ -88,5 +95,5 @@
 }
 
 .WatermarkRectangle {
-    width: 4%;
+  width: 4%;
 }
