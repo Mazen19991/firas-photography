@@ -1,0 +1,29 @@
+.Container{
+    height: 35%;
+    background-color: #f7f5f1;
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+
+.leftContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.TiltedText {
+    font-family: Sarabun;
+    writing-mode: vertical-rl;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0;
+    transform: rotate(180deg);
+  }
