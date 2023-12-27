@@ -1,29 +1,92 @@
-.Container{
-    height: 35%;
-    background-color: #f7f5f1;
-    display: grid;
-    grid-template-columns: 10% 90%;
+.Container {
+  height: 50%;
+  width: 100%;
+  background-color: #f9faf5;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  overflow: hidden;
+  position: relative;
 }
 
-.leftContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.leftContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.rightContainer{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.rightContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 5rem;
+  gap: 3rem;
 }
 
 .TiltedText {
-    font-family: Sarabun;
-    writing-mode: vertical-rl;
-    font-style: normal;
-    line-height: normal;
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin: 0;
-    transform: rotate(180deg);
-  }
+  font-family: Sarabun;
+  writing-mode: vertical-rl;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0;
+  transform: rotate(180deg);
+}
+
+.AvatarContainer {
+  margin-bottom: 7.5rem;
+  z-index: 2;
+}
+.FeedbackContainer {
+  width: 50%;
+  margin: 0;
+  
+}
+.FeedbackTextContainer {
+  background-color: rgb(247, 245, 241);
+  padding: 1rem 1rem;
+  font-family: Sarabun;
+  font-size: 14 px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  z-index: 2;
+}
+.FeedbackButtonContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.FeedbackButtonContainer button {
+  background-color: #f9faf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-top: 1rem;
+  border-radius: 50%;
+  border: 2px solid rgb(243, 241, 238);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.WatermarkContainer {
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+  gap: 6rem;
+}
+.WatermarkComma {
+  opacity: 0.2;
+  width: 20%;
+  margin-bottom: 4%;
+}
+
+.WatermarkRectangle {
+    width: 4%;
+}

@@ -32,124 +32,123 @@ const SmallAvatar = styled(Avatar)(({ theme }) => ({
   backgroundColor: "#C69E50",
 }));
 
-const Avatars: FC = () => {
-  const [activeAvatar, setActiveAvatar] = useState(1);
+interface AvatarsProps {
+  selectedAvatar: number;
+  onAvatarChange: (number: number) => void;
+}
 
-  const changeAvatar = (number: number) => {
-    setActiveAvatar(number);
-    console.log(activeAvatar);
-  };
+const Avatars: FC<AvatarsProps> = ({ selectedAvatar, onAvatarChange }) => {
 
   return (
     <Stack direction="row" spacing={2}>
       <div
-        onClick={() => changeAvatar(1)}
+        onClick={() => onAvatarChange(1)}
         className={avatarStyle.AvatarContainer}
       >
-        {activeAvatar === 1 ? (
+        {selectedAvatar === 1 ? (
           <>
-          <Badge
-            overlap="circular"
-            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-            badgeContent={
-              <SmallAvatar>
-                <img
-                  src={doubleQuotations}
-                  alt="Quotations"
-                  style={{ width: 12.5, height: 10 }}
-                />
-              </SmallAvatar>
-            }
-          >
-            <ActiveAvatarStyled
+            <Badge
+              overlap="circular"
+              anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+              badgeContent={
+                <SmallAvatar>
+                  <img
+                    src={doubleQuotations}
+                    alt="Quotations"
+                    style={{ width: 12.5, height: 10 }}
+                  />
+                </SmallAvatar>
+              }
+            >
+              <ActiveAvatarStyled
+                alt="Remy Sharp"
+                src="/static/images/avatar/1.jpg"
+                sx={{ width: "75px", height: "75px" }}
+              />
+            </Badge>
+            <p>Angela Molie</p>
+          </>
+        ) : (
+          <>
+            <InActiveAvatarStyled
               alt="Remy Sharp"
               src="/static/images/avatar/1.jpg"
               sx={{ width: "75px", height: "75px" }}
             />
-          </Badge>
-          <p>Angela Molie</p>
-          </>
-        ) : (
-          <>
-          <InActiveAvatarStyled
-            alt="Remy Sharp"
-            src="/static/images/avatar/1.jpg"
-            sx={{ width: "75px", height: "75px" }}
-          />
           </>
         )}
       </div>
       <div
-        onClick={() => changeAvatar(2)}
+        onClick={() => onAvatarChange(2)}
         className={avatarStyle.AvatarContainer}
       >
-        {activeAvatar === 2 ? (
+        {selectedAvatar === 2 ? (
           <>
-          <Badge
-            overlap="circular"
-            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-            badgeContent={
-              <SmallAvatar>
-                <img
-                  src={doubleQuotations}
-                  alt="Quotations"
-                  style={{ width: 12.5, height: 10 }}
-                />
-              </SmallAvatar>
-            }
-          >
-            <ActiveAvatarStyled
+            <Badge
+              overlap="circular"
+              anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+              badgeContent={
+                <SmallAvatar>
+                  <img
+                    src={doubleQuotations}
+                    alt="Quotations"
+                    style={{ width: 12.5, height: 10 }}
+                  />
+                </SmallAvatar>
+              }
+            >
+              <ActiveAvatarStyled
+                alt="Remy Sharp"
+                src="/static/images/avatar/1.jpg"
+                sx={{ width: "75px", height: "75px" }}
+              />
+            </Badge>
+            <p>Angela Molie</p>
+          </>
+        ) : (
+          <>
+            <InActiveAvatarStyled
               alt="Remy Sharp"
               src="/static/images/avatar/1.jpg"
               sx={{ width: "75px", height: "75px" }}
             />
-          </Badge>
-          <p>Angela Molie</p>
-          </>
-        ) : (
-          <>
-          <InActiveAvatarStyled
-            alt="Remy Sharp"
-            src="/static/images/avatar/1.jpg"
-            sx={{ width: "75px", height: "75px" }}
-          />
           </>
         )}
       </div>
       <div
-        onClick={() => changeAvatar(3)}
+        onClick={() => onAvatarChange(3)}
         className={avatarStyle.AvatarContainer}
       >
-        {activeAvatar === 3 ? (
+        {selectedAvatar === 3 ? (
           <>
-          <Badge
-            overlap="circular"
-            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-            badgeContent={
-              <SmallAvatar>
-                <img
-                  src={doubleQuotations}
-                  alt="Quotations"
-                  style={{ width: 12.5, height: 10 }}
-                />
-              </SmallAvatar>
-            }
-          >
-            <ActiveAvatarStyled
+            <Badge
+              overlap="circular"
+              anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+              badgeContent={
+                <SmallAvatar>
+                  <img
+                    src={doubleQuotations}
+                    alt="Quotations"
+                    style={{ width: 12.5, height: 10 }}
+                  />
+                </SmallAvatar>
+              }
+            >
+              <ActiveAvatarStyled
+                alt="Remy Sharp"
+                src="/static/images/avatar/1.jpg"
+                sx={{ width: "75px", height: "75px" }}
+              />
+            </Badge>
+            <p>Angela Molie</p>
+          </>
+        ) : (
+          <>
+            <InActiveAvatarStyled
               alt="Remy Sharp"
               src="/static/images/avatar/1.jpg"
               sx={{ width: "75px", height: "75px" }}
             />
-          </Badge>
-          <p>Angela Molie</p>
-          </>
-        ) : (
-          <>
-          <InActiveAvatarStyled
-            alt="Remy Sharp"
-            src="/static/images/avatar/1.jpg"
-            sx={{ width: "75px", height: "75px" }}
-          />
           </>
         )}
       </div>
