@@ -1,6 +1,7 @@
 .AvatarContainer {
   border-radius: 50%;
-  width: 6rem;
+  width: 6.5rem;
   padding: 0;
   margin: 0;
+  font-family: 'Sarabun', sans-serif;
 }

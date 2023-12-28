@@ -7,8 +7,8 @@ import doubleQuotations from "../../../Assets/doubleQuotations.png";
 import avatarStyle from "./Avatars.module.css";
 
 const ActiveAvatarStyled = styled(Avatar)(({ theme }) => ({
-  width: 75,
-  height: 75,
+  width: 90,
+  height: 90,
   backgroundColor: theme.palette.primary.main,
   opacity: "1",
   "&:hover": {
@@ -17,8 +17,8 @@ const ActiveAvatarStyled = styled(Avatar)(({ theme }) => ({
 }));
 
 const InActiveAvatarStyled = styled(Avatar)(({ theme }) => ({
-  width: 75,
-  height: 75,
+  width: 90,
+  height: 90,
   backgroundColor: theme.palette.primary.main,
   opacity: "0.5",
   "&:hover": {
@@ -63,7 +63,6 @@ const Avatars: FC<AvatarsProps> = ({ selectedAvatar, onAvatarChange }) => {
               <ActiveAvatarStyled
                 alt="Remy Sharp"
                 src="/static/images/avatar/1.jpg"
-                sx={{ width: "75px", height: "75px" }}
               />
             </Badge>
             <p>Angela Molie</p>
@@ -73,7 +72,6 @@ const Avatars: FC<AvatarsProps> = ({ selectedAvatar, onAvatarChange }) => {
             <InActiveAvatarStyled
               alt="Remy Sharp"
               src="/static/images/avatar/1.jpg"
-              sx={{ width: "75px", height: "75px" }}
             />
           </>
         )}
@@ -100,7 +98,6 @@ const Avatars: FC<AvatarsProps> = ({ selectedAvatar, onAvatarChange }) => {
               <ActiveAvatarStyled
                 alt="Remy Sharp"
                 src="/static/images/avatar/1.jpg"
-                sx={{ width: "75px", height: "75px" }}
               />
             </Badge>
             <p>Angela Molie</p>
@@ -110,7 +107,6 @@ const Avatars: FC<AvatarsProps> = ({ selectedAvatar, onAvatarChange }) => {
             <InActiveAvatarStyled
               alt="Remy Sharp"
               src="/static/images/avatar/1.jpg"
-              sx={{ width: "75px", height: "75px" }}
             />
           </>
         )}
@@ -137,7 +133,6 @@ const Avatars: FC<AvatarsProps> = ({ selectedAvatar, onAvatarChange }) => {
               <ActiveAvatarStyled
                 alt="Remy Sharp"
                 src="/static/images/avatar/1.jpg"
-                sx={{ width: "75px", height: "75px" }}
               />
             </Badge>
             <p>Angela Molie</p>
@@ -147,7 +142,6 @@ const Avatars: FC<AvatarsProps> = ({ selectedAvatar, onAvatarChange }) => {
             <InActiveAvatarStyled
               alt="Remy Sharp"
               src="/static/images/avatar/1.jpg"
-              sx={{ width: "75px", height: "75px" }}
             />
           </>
         )}

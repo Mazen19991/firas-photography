@@ -1,5 +1,5 @@
 .Container {
-  height: 50%;
+  height: 70%;
   width: 100%;
   background-color: #f9faf5;
   display: grid;
@@ -23,7 +23,6 @@
 }
 
 .TiltedText {
-  font-family: Sarabun;
   writing-mode: vertical-rl;
   font-style: normal;
   line-height: normal;
@@ -31,15 +30,16 @@
   font-size: 1rem;
   margin: 0;
   transform: rotate(180deg);
+  font-family: 'Sarabun', sans-serif;
 }
 
 .AvatarContainer {
-  margin-bottom: 7.5rem;
+  margin-bottom: 11%;
   z-index: 2;
 }
 .FeedbackContainer {
   width: 100%;
-  height: 67.5%;
+  height: 55%;
   margin: 0;
 }
 .FeedbackTextContainer {
@@ -58,6 +58,7 @@
 
 .FeedbackTextContainer p {
   width: 90%;
+  font-family: 'Sarabun', sans-serif;
 }
 .FeedbackButtonContainer {
   display: flex;
@@ -91,7 +92,7 @@
 .WatermarkComma {
   opacity: 0.2;
   width: 20%;
-  margin-bottom: 4%;
+  margin-bottom: 6%;
 }
 
 .WatermarkRectangle {

@@ -3,22 +3,24 @@
   background-color: #d8b880;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  font-family: "Sarabun", sans-serif;
 }
-.Container button{
-    color: black;
-    font-family: 'Sarabun';
-    background-color: #d8b880;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;    
-    border: 0;
-  }
-.Container button:active{
-    background-color: #d9c094;
-    border-right: 1px solid #c8a15c;
-    border-bottom: 1px solid #c8a15c;
-  }
-.Container button:hover{
-    cursor: pointer;
-  }
+.Container button {
+  color: black;
+  background-color: #d8b880;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: normal;
+  border: 0;
+  font-family: "Sarabun", sans-serif;
+}
+.Container button:active {
+  background-color: #d9c094;
+  border-right: 1px solid #c8a15c;
+  border-bottom: 1px solid #c8a15c;
+  font-family: "Sarabun", sans-serif;
+}
+.Container button:hover {
+  cursor: pointer;
+  font-family: "Sarabun", sans-serif;
+}
