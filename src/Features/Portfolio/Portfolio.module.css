@@ -1,5 +1,5 @@
 .Container {
-  height: 90%;
+  min-height: 87.5%;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,8 @@
   justify-content: space-around;
   align-items: center;
   font-family: "Sarabun", sans-serif;
-  padding: 2rem;
+  box-sizing: border-box;
+  padding: 1rem;
 }
 
 .titleContainer p {
@@ -29,6 +30,7 @@
 .carouselContainer {
     background-size: cover;
     overflow: hidden;
+    margin: 0;
 }
 
 .buttonContainer {
@@ -36,6 +38,8 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 .buttonContainer button {
   background-color: black;

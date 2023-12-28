@@ -1,5 +1,5 @@
 .Container {
-  height: 70%;
+  min-height: 70%;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -40,13 +40,14 @@
 }
 
 .CollectionTitlesContainer {
-  height: 15%;
+  min-height: 15%;
   background-color: black;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr)); /* Responsive grid */
   padding-left: 5rem;
   padding-right: 5rem;
   gap: 0.5rem;
+  overflow: hidden;
 }
 
 .CollectionTitlesContainer a {

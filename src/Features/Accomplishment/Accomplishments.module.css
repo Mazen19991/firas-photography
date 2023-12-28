@@ -1,8 +1,8 @@
 .Container {
-  height: 25%;
+  min-height: 25%;
   background-color: #d8b880;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   font-family: "Sarabun", sans-serif;
 }
 .Container button {

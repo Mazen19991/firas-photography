@@ -105,7 +105,7 @@ const Home: FC = () => {
                   alt="Firas Bou Hatoum"
                   style={{
                     // transform: change ? "translateX(-100%)" : "translateX(0)",
-                    backgroundSize: "cover",
+                    objectFit: "contain",
                     maxWidth: "100%",
                     width: "auto",
                     height: "auto",
@@ -125,7 +125,7 @@ const Home: FC = () => {
                   alt="Firas Bou Hatoum"
                   style={{
                     // transform: change ? "translateX(-100%)" : "translateX(0)",
-                    backgroundSize: "cover",
+                    objectFit: "contain",
                     maxWidth: "100%",
                     width: "auto",
                     height: "auto",

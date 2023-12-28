@@ -7,8 +7,8 @@ import doubleQuotations from "../../../Assets/doubleQuotations.png";
 import avatarStyle from "./Avatars.module.css";
 
 const ActiveAvatarStyled = styled(Avatar)(({ theme }) => ({
-  width: 90,
-  height: 90,
+  width: '5.75rem',
+  height: '5.75rem',
   backgroundColor: theme.palette.primary.main,
   opacity: "1",
   "&:hover": {
@@ -17,8 +17,8 @@ const ActiveAvatarStyled = styled(Avatar)(({ theme }) => ({
 }));
 
 const InActiveAvatarStyled = styled(Avatar)(({ theme }) => ({
-  width: 90,
-  height: 90,
+  width: '5.75rem',
+  height: '5.75rem',
   backgroundColor: theme.palette.primary.main,
   opacity: "0.5",
   "&:hover": {
@@ -27,8 +27,8 @@ const InActiveAvatarStyled = styled(Avatar)(({ theme }) => ({
 }));
 
 const SmallAvatar = styled(Avatar)(({ theme }) => ({
-  width: 25,
-  height: 25,
+  width: '1.75rem',
+  height: '1.75rem',
   backgroundColor: "#C69E50",
 }));
 
@@ -55,7 +55,7 @@ const Avatars: FC<AvatarsProps> = ({ selectedAvatar, onAvatarChange }) => {
                   <img
                     src={doubleQuotations}
                     alt="Quotations"
-                    style={{ width: 12.5, height: 10 }}
+                    style={{ width: '0.8rem', height: '0.7rem' }}
                   />
                 </SmallAvatar>
               }
@@ -90,7 +90,7 @@ const Avatars: FC<AvatarsProps> = ({ selectedAvatar, onAvatarChange }) => {
                   <img
                     src={doubleQuotations}
                     alt="Quotations"
-                    style={{ width: 12.5, height: 10 }}
+                    style={{ width: '0.8rem', height: '0.7rem' }}
                   />
                 </SmallAvatar>
               }
@@ -125,7 +125,7 @@ const Avatars: FC<AvatarsProps> = ({ selectedAvatar, onAvatarChange }) => {
                   <img
                     src={doubleQuotations}
                     alt="Quotations"
-                    style={{ width: 12.5, height: 10 }}
+                    style={{ width: '0.8rem', height: '0.7rem' }}
                   />
                 </SmallAvatar>
               }
