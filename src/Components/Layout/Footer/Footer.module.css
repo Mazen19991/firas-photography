@@ -1,0 +1,54 @@
+.Container {
+  min-height: 35%;
+  background-color: #1c1c1c;
+}
+
+.InnerContainer {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding: 1rem 7.5rem;
+}
+
+.topContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.IconLink {
+  text-decoration: none;
+  color: #f7f5f1;
+}
+
+.IconLink:hover,
+.IconLink:active,
+.IconLink:visited {
+  color: #f7f5f1;
+  cursor: pointer;
+}
+
+.bottomContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #f7f5f1;
+}
+
+.FirstLine {
+  font-family: Sarabun;
+  font-size: 50.695px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.SecondLine {
+  font-family: Sarabun;
+  font-size: 50.695px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}

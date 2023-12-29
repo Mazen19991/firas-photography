@@ -5,7 +5,7 @@ import Picture2 from "../../Assets/Website Images/AP7A3524.jpg";
 import Watermark1 from "../../Assets/WatermarkFiras.svg";
 import Watermark2 from "../../Assets/Watermark2Signature.svg";
 import homeStyle from "./Home.module.css";
-import Header from "../../Components/Layout/Header";
+import Header from "../../Components/Layout/Header/Header";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -14,10 +14,14 @@ import Portfolio from "../Portfolio";
 import Accomplishments from "../Accomplishment";
 import Feedback from "../Feedback";
 import Collection from "../Collection";
+import CorporateService from "../CorporateService";
+import Drone from "../Drone/Drone";
+import Footer from "../../Components/Layout/Footer";
 
 const Home: FC = () => {
   const [change, setChange] = useState(false);
   const imageTransition = React.useRef<HTMLDivElement>(null);
+
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -39,7 +43,7 @@ const Home: FC = () => {
       <div className={homeStyle.Container}>
         <div className={homeStyle.LeftContainer}>
           <div>
-          <p className={homeStyle.TiltedText}>ONLINE PORTFOLIO</p>
+            <p className={homeStyle.TiltedText}>ONLINE PORTFOLIO</p>
           </div>
           <div className={homeStyle.NameContainer}>
             <Fade in={!change} timeout={500} unmountOnExit>
@@ -162,14 +166,26 @@ const Home: FC = () => {
           </div>
         </div>
         <div className={homeStyle.WatermarkContainer}>
-          <img src={Watermark1} style={{width:"50rem",}} alt="Firas Watermark1"/>
-          <img src={Watermark2} style={{width:"50rem",}} alt="Firas Watermark2"/>
+          <img
+            src={Watermark1}
+            style={{ width: "50rem" }}
+            alt="Firas Watermark1"
+          />
+          <img
+            src={Watermark2}
+            style={{ width: "50rem" }}
+            alt="Firas Watermark2"
+          />
         </div>
       </div>
-      <Portfolio/>
-      <Accomplishments/>
-      <Feedback/>
-      <Collection/>
+      <Portfolio />
+      <Accomplishments />
+      <Feedback />
+      <Collection collectionType={true} />
+      <CorporateService />
+      <Collection collectionType={false} />
+      <Drone/>
+      <Footer/>
     </>
   );
 };

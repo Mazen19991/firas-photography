@@ -20,3 +20,6 @@ html,body,#root{
   overflow-x: hidden;
   position: relative;
 }
+#root::-webkit-scrollbar{
+  display: none;
+}
