@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import {  Link } from "react-router-dom";
 
 const theme = createTheme({
   palette: {
@@ -37,40 +38,10 @@ function Nav(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
   return true;
 }
 
-interface LinkTabProps {
-  label?: string;
-  href?: string;
-}
-
-function LinkTab(props: LinkTabProps) {
-  return (
-    <Tab
-      component="a"
-      sx={{
-        minWidth: "unset", // Ensure no minimum width
-        minHeight: "unset", // Ensure no minimum height
-        maxWidth: "unset", // Ensure no minimum width
-        maxHeight: "unset", // Ensure no minimum height
-        "&.MuiTab-root": {
-          padding: "0.5rem", //Additional style for certain versions of Material-UI
-        },
-      }}
-      onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        // Routing libraries handle this, you can remove the onClick handle when using them.
-        if (Nav(event)) {
-          event.preventDefault();
-        }
-      }}
-      {...props}
-    />
-  );
-}
-
 export default function NavTabs() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    // event.type can be equal to focus with selectionFollowsFocus.
     if (
       event.type !== "click" ||
       (event.type === "click" &&
@@ -81,29 +52,92 @@ export default function NavTabs() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <Box sx={{
-        marginRight:"11.5%"
-      }}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="nav tabs example"
-          sx={{
-            minWidth: "unset", // Ensure no minimum width
-            minHeight: "unset", // Ensure no minimum height
-            maxWidth: "unset", // Ensure no minimum width
-            maxHeight: "unset", // Ensure no minimum height
-            "& .MuiTabs-active":{
-            }
-          }}        >
-          <LinkTab label="Home" />
-          <LinkTab label="About Me" />
-          <LinkTab label="Portfolio" />
-          <LinkTab label="Blog" />
-          <LinkTab label="Contact Us" />
-        </Tabs>
-      </Box>
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <Box sx={{ marginRight: "11.5%" }}>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="nav tabs example"
+            sx={{
+              minWidth: "unset",
+              minHeight: "unset",
+              maxWidth: "unset",
+              maxHeight: "unset",
+              "& .MuiTabs-active": {},
+            }}
+          >
+            <Tab
+              component={Link}
+              to={"/Home"}
+              label={"home"}
+              sx={{
+                minWidth: "unset",
+                minHeight: "unset",
+                maxWidth: "unset",
+                maxHeight: "unset",
+                "&.MuiTab-root": {
+                  padding: "0.5rem",
+                },
+              }}
+            ></Tab>
+            <Tab
+              component={Link}
+              to={"/AboutMe"}
+              label={"About me"}
+              sx={{
+                minWidth: "unset",
+                minHeight: "unset",
+                maxWidth: "unset",
+                maxHeight: "unset",
+                "&.MuiTab-root": {
+                  padding: "0.5rem",
+                },
+              }}
+            ></Tab>
+            <Tab
+              component={Link}
+              to={"/Portfolio"}
+              label={"Portfolio"}
+              sx={{
+                minWidth: "unset",
+                minHeight: "unset",
+                maxWidth: "unset",
+                maxHeight: "unset",
+                "&.MuiTab-root": {
+                  padding: "0.5rem",
+                },
+              }}
+            ></Tab>
+            <Tab
+              component={Link}
+              to={"/Blog"}
+              label={"Blog"}
+              sx={{
+                minWidth: "unset",
+                minHeight: "unset",
+                maxWidth: "unset",
+                maxHeight: "unset",
+                "&.MuiTab-root": {
+                  padding: "0.5rem",
+                },
+              }}
+            ></Tab>
+            <Tab
+              component={Link}
+              to={"/ContactUs"}
+              label={"ContactUs"}
+              sx={{
+                minWidth: "unset",
+                minHeight: "unset",
+                maxWidth: "unset",
+                maxHeight: "unset",
+                "&.MuiTab-root": {
+                  padding: "0.5rem",
+                },
+              }}
+            ></Tab>
+          </Tabs>
+        </Box>
+      </ThemeProvider>
   );
 }

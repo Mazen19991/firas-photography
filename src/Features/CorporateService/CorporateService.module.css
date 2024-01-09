@@ -1,3 +1,88 @@
-.Container{
-    min-height: 87.5%;
+.Container {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange children vertically */
+  min-height: 87.5%; /* Set a minimum height of 87.5% viewport height */
+  overflow: hidden;
+  position: relative;
+  background-color: #f7f5f1;
+}
+
+.InnerContainer {
+  flex-grow: 1; /* Expand to take up available vertical space */
+  margin: 2.5rem 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.TextContainer {
+  margin-left: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+}
+.TextContainer h1 {
+  font-family: "Sarabun", sans-serif;
+  font-size: 3rem;
+  width: 40%;
+  margin: 0;
+}
+
+.TextContainer p {
+  font-family: "Sarabun", sans-serif;
+  margin: 0;
+}
+
+.Contactbutton {
+  margin-top: 1rem;
+  margin-left: 4;
+  padding: 0.75rem 3rem;
+  border-radius: 2.5rem 2.5rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.ContactButtonText {
+  font-size: 1.2rem;
+  font-family: "Sarabun", sans-serif;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 700;
+  color: #f7f5f1;
+  margin: 0;
+}
+.Image1 {
+  position: absolute;
+  right: -42.5rem;
+  top: 2.5rem;
+  z-index: 3;
+}
+
+.Image2 {
+  position: absolute;
+  right: -7rem;
+  top: 5rem;
+  z-index: 1;
+}
+
+.Image3 {
+  position: absolute;
+  right: -25rem;
+  z-index: 2;
+}
+
+.WatermarkContainer {
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  left: -50rem;
+}
+
+.Watermark {
+  width: 50%;
 }

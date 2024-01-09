@@ -17,7 +17,7 @@
 }
 
 .TiltedText {
-  font-family: 'Sarabun', sans-serif;
+  font-family: "Sarabun", sans-serif;
   writing-mode: vertical-rl;
   font-style: normal;
   line-height: normal;
@@ -40,7 +40,7 @@
 
 .Name {
   font-size: 6.5rem;
-  font-family: 'Sarabun', sans-serif;
+  font-family: "Sarabun", sans-serif;
   font-style: normal;
   line-height: normal;
   font-weight: 700;
@@ -61,14 +61,14 @@
 
 .ContactButtonText {
   font-size: 1.2rem;
-  font-family: 'Sarabun', sans-serif;
+  font-family: "Sarabun", sans-serif;
   font-style: normal;
   line-height: normal;
   font-weight: 700;
   color: #f7f5f1;
   margin: 0;
 }
-.TextElement{
+.TextElement {
   margin: 0;
   overflow: hidden;
 }
@@ -96,14 +96,42 @@
   gap: 1rem;
 }
 
-.IconLink {
+.IconLinkF {
   text-decoration: none;
   color: black;
 }
 
-.IconLink:hover,
-.IconLink:active,
-.IconLink:visited {
+.IconLinkF:hover {
+  color: royalblue;
+  cursor: pointer;
+}
+.IconLinkF:active {
+  color: black;
+  cursor: pointer;
+}
+.IconLinkT {
+  text-decoration: none;
+  color: black;
+}
+
+.IconLinkT:hover {
+  color: deepskyblue;
+  cursor: pointer;
+}
+.IconLinkT:active {
+  color: black;
+  cursor: pointer;
+}
+.IconLinkI {
+  text-decoration: none;
+  color: black;
+}
+
+.IconLinkI:hover {
+  color: magenta;
+  cursor: pointer;
+}
+.IconLinkI:active{
   color: black;
   cursor: pointer;
 }
@@ -117,7 +145,7 @@
   right: 0%;
 }
 
-.WatermarkContainer img{
+.WatermarkContainer img {
   margin: 0;
   padding: 0;
 }

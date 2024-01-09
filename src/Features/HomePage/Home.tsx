@@ -5,7 +5,6 @@ import Picture2 from "../../Assets/Website Images/AP7A3524.jpg";
 import Watermark1 from "../../Assets/WatermarkFiras.svg";
 import Watermark2 from "../../Assets/Watermark2Signature.svg";
 import homeStyle from "./Home.module.css";
-import Header from "../../Components/Layout/Header/Header";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -39,7 +38,6 @@ const Home: FC = () => {
 
   return (
     <>
-      <Header />
       <div className={homeStyle.Container}>
         <div className={homeStyle.LeftContainer}>
           <div>
@@ -141,7 +139,7 @@ const Home: FC = () => {
           <div className={homeStyle.IconContainer}>
             <a
               href="https://www.facebook.com"
-              className={homeStyle.IconLink}
+              className={homeStyle.IconLinkF}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -149,7 +147,7 @@ const Home: FC = () => {
             </a>
             <a
               href="https://twitter.com"
-              className={homeStyle.IconLink}
+              className={homeStyle.IconLinkT}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -157,7 +155,7 @@ const Home: FC = () => {
             </a>
             <a
               href="https://www.instagram.com"
-              className={homeStyle.IconLink}
+              className={homeStyle.IconLinkI}
               target="_blank"
               rel="noopener noreferrer"
             >
