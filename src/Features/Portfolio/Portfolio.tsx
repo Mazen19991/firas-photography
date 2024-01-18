@@ -13,7 +13,7 @@ function Portfolio() {
   };
 
   return (
-    <div className={portfolioStyle.Container}>
+    <div id="Portfolio" className={portfolioStyle.Container}>
       <div className={portfolioStyle.titleContainer}>
         <p>PORTFOLIO</p>
       </div>

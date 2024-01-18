@@ -21,7 +21,6 @@ const Home: FC = () => {
   const [change, setChange] = useState(false);
   const imageTransition = React.useRef<HTMLDivElement>(null);
 
-
   useEffect(() => {
     const intervalId = setInterval(() => {
       // Change to new data after 5 seconds
@@ -38,7 +37,7 @@ const Home: FC = () => {
 
   return (
     <>
-      <div className={homeStyle.Container}>
+      <div id="Home" className={homeStyle.Container}>
         <div className={homeStyle.LeftContainer}>
           <div>
             <p className={homeStyle.TiltedText}>ONLINE PORTFOLIO</p>
@@ -182,8 +181,8 @@ const Home: FC = () => {
       <Collection collectionType={true} />
       <CorporateService />
       <Collection collectionType={false} />
-      <Drone/>
-      <Footer/>
+      <Drone />
+        <Footer />
     </>
   );
 };

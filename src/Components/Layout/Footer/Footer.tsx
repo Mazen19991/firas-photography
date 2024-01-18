@@ -6,7 +6,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 
 const Footer: FC = () => {
   return (
-    <div className={footerStyle.Container}>
+    <div id="Footer" className={footerStyle.Container}>
       <div className={footerStyle.InnerContainer}>
         <div className={footerStyle.topContainer}>
           <a

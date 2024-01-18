@@ -1,6 +1,7 @@
 .Container {
   min-height: 35%;
   background-color: #1c1c1c;
+  border-bottom: 1px solid;
 }
 
 .InnerContainer {

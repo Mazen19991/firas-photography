@@ -1,143 +1,72 @@
-import React from "react";
-import Box from "@mui/material/Box";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import {  Link } from "react-router-dom";
+// NavTabs.tsx
+import React, { useState } from "react";
+import navStyle from "./NavTabs.module.css"; // Import your custom CSS for styling
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#000000",
-    },
-  },
-  typography: {
-    allVariants: {
-      textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-      textTransform: "capitalize",
-      fontFamily: "Sarabun",
-      fontSize: "1.21431rem",
-      fontStyle: "normal",
-      fontWeight: 400,
-      lineHeight: "normal",
-    },
-  },
-});
+const NavTabs = () => {
+  const [activeTab, setActiveTab] = useState(0);
 
-function Nav(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
-  if (
-    event.defaultPrevented ||
-    event.button !== 0 || // ignore everything but left-click
-    event.metaKey ||
-    event.ctrlKey ||
-    event.altKey ||
-    event.shiftKey
-  ) {
-    return false;
-  }
-  return true;
-}
+  const handleTabClick = (index: number) => {
+    setActiveTab(index);
+    scrollToSection(index);
+  };
 
-export default function NavTabs() {
-  const [value, setValue] = React.useState(0);
+  const scrollToSection = (index: number) => {
+    // Implement your logic to scroll to the corresponding section
+    let element;
+    switch (index) {
+      case 0:
+        element = document.getElementById("Home");
+        break;
+      case 1:
+        element = document.getElementById("Home");
+        break;
+      case 2:
+        element = document.getElementById("Portfolio");
+        break;
+      case 3:
+        element = document.getElementById("Footer");
+        break;
+      default:
+        break;
+    }
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    if (
-      event.type !== "click" ||
-      (event.type === "click" &&
-        Nav(event as React.MouseEvent<HTMLAnchorElement, MouseEvent>))
-    ) {
-      setValue(newValue);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+      });
     }
   };
 
   return (
-      <ThemeProvider theme={theme}>
-        <Box sx={{ marginRight: "11.5%" }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="nav tabs example"
-            sx={{
-              minWidth: "unset",
-              minHeight: "unset",
-              maxWidth: "unset",
-              maxHeight: "unset",
-              "& .MuiTabs-active": {},
-            }}
-          >
-            <Tab
-              component={Link}
-              to={"/Home"}
-              label={"home"}
-              sx={{
-                minWidth: "unset",
-                minHeight: "unset",
-                maxWidth: "unset",
-                maxHeight: "unset",
-                "&.MuiTab-root": {
-                  padding: "0.5rem",
-                },
-              }}
-            ></Tab>
-            <Tab
-              component={Link}
-              to={"/AboutMe"}
-              label={"About me"}
-              sx={{
-                minWidth: "unset",
-                minHeight: "unset",
-                maxWidth: "unset",
-                maxHeight: "unset",
-                "&.MuiTab-root": {
-                  padding: "0.5rem",
-                },
-              }}
-            ></Tab>
-            <Tab
-              component={Link}
-              to={"/Portfolio"}
-              label={"Portfolio"}
-              sx={{
-                minWidth: "unset",
-                minHeight: "unset",
-                maxWidth: "unset",
-                maxHeight: "unset",
-                "&.MuiTab-root": {
-                  padding: "0.5rem",
-                },
-              }}
-            ></Tab>
-            <Tab
-              component={Link}
-              to={"/Blog"}
-              label={"Blog"}
-              sx={{
-                minWidth: "unset",
-                minHeight: "unset",
-                maxWidth: "unset",
-                maxHeight: "unset",
-                "&.MuiTab-root": {
-                  padding: "0.5rem",
-                },
-              }}
-            ></Tab>
-            <Tab
-              component={Link}
-              to={"/ContactUs"}
-              label={"ContactUs"}
-              sx={{
-                minWidth: "unset",
-                minHeight: "unset",
-                maxWidth: "unset",
-                maxHeight: "unset",
-                "&.MuiTab-root": {
-                  padding: "0.5rem",
-                },
-              }}
-            ></Tab>
-          </Tabs>
-        </Box>
-      </ThemeProvider>
+    <div className={navStyle.navTabsContainer}>
+      <div
+        className={`${navStyle.navTab} ${activeTab === 0 ? navStyle.active : ""}`}
+        onClick={() => handleTabClick(0)}
+      >
+        <p className={navStyle.textTab}>Home</p>
+      </div>
+      <div
+        className={`${navStyle.navTab} ${activeTab === 1 ? navStyle.active : ""}`}
+        onClick={() => handleTabClick(1)}
+      >
+        <p className={navStyle.textTab}>About Me</p>
+      </div>
+      <div
+        className={`${navStyle.navTab} ${activeTab === 2 ? navStyle.active : ""}`}
+        onClick={() => handleTabClick(2)}
+      >
+        <p className={navStyle.textTab}>portfolio</p>
+      </div>
+      <div
+        className={`${navStyle.navTab} ${activeTab === 3 ? navStyle.active : ""}`}
+        onClick={() => handleTabClick(3)}
+      >
+        <p className={navStyle.textTab}>Contact Us</p>
+      </div>
+      <div className={`${navStyle.underline} ${navStyle.slide}`} style={{ left: `${activeTab * 25}%` }} />
+    </div>
   );
-}
+};
+
+export default NavTabs;
