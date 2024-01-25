@@ -2,12 +2,14 @@
   min-height: 35%;
   background-color: #1c1c1c;
   border-bottom: 1px solid;
+  overflow: hidden;
 }
 
 .InnerContainer {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  padding: 1rem 7.5rem;
+  grid-template-rows: 60% 75%;
+  padding-left: 7.5rem;
+  padding-right: 7.5rem;
 }
 
 .topContainer {
@@ -17,15 +19,41 @@
   gap: 2rem;
 }
 
-.IconLink {
+.IconLinkF,
+.IconLinkT,
+.IconLinkI {
   text-decoration: none;
-  color: #f7f5f1;
+  color: white;
+  transition: color 0.3s ease; /* Add a transition for the color property */
 }
 
-.IconLink:hover,
-.IconLink:active,
-.IconLink:visited {
-  color: #f7f5f1;
+.IconLinkF:hover {
+  color: royalblue;
+  cursor: pointer;
+}
+
+.IconLinkT:hover {
+  color: deepskyblue;
+  cursor: pointer;
+}
+
+.IconLinkI:hover {
+  color: magenta;
+  cursor: pointer;
+}
+
+.IconLinkF:active {
+  color: black;
+  cursor: pointer;
+}
+
+.IconLinkT:active {
+  color: black;
+  cursor: pointer;
+}
+
+.IconLinkI:active {
+  color: black;
   cursor: pointer;
 }
 

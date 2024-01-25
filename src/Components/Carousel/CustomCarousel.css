@@ -1,0 +1,8 @@
+/* CarouselSlider.module.css */
+  
+.slick-dots li button:before {
+    color: #f7f5f1;
+  }
+.slick-dots li.slick-active button:before {
+    color: #f7f5f1;
+  }

@@ -16,6 +16,7 @@ import Collection from "../Collection";
 import CorporateService from "../CorporateService";
 import Drone from "../Drone/Drone";
 import Footer from "../../Components/Layout/Footer";
+import Header from "../../Components/Layout/Header";
 
 const Home: FC = () => {
   const [change, setChange] = useState(false);
@@ -35,8 +36,13 @@ const Home: FC = () => {
     return () => clearInterval(intervalId);
   }, []);
 
+  const HandleContactButton = () => {
+    window.open("https://api.whatsapp.com/send?phone=971505752859");
+  };
+
   return (
     <>
+      <Header />
       <div id="Home" className={homeStyle.Container}>
         <div className={homeStyle.LeftContainer}>
           <div>
@@ -58,6 +64,7 @@ const Home: FC = () => {
                   <>
                     About <br /> Me
                   </>
+                  
                 )}
               </h1>
             </Fade>
@@ -65,7 +72,7 @@ const Home: FC = () => {
               <Fade in={!change} timeout={500} unmountOnExit>
                 <div>
                   {!change && (
-                    <button className={homeStyle.ContactButton}>
+                    <button className={homeStyle.ContactButton} onClick={HandleContactButton}>
                       <p className={homeStyle.ContactButtonText}>Contact me</p>
                     </button>
                   )}
@@ -110,6 +117,7 @@ const Home: FC = () => {
                     maxWidth: "100%",
                     width: "auto",
                     height: "auto",
+                    borderRadius:"20px",
                   }}
                 />
               </Slide>
@@ -130,6 +138,7 @@ const Home: FC = () => {
                     maxWidth: "100%",
                     width: "auto",
                     height: "auto",
+                    borderRadius:"20px",
                   }}
                 />
               </Slide>
@@ -182,7 +191,7 @@ const Home: FC = () => {
       <CorporateService />
       <Collection collectionType={false} />
       <Drone />
-        <Footer />
+      <Footer />
     </>
   );
 };

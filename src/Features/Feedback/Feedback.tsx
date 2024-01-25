@@ -36,41 +36,42 @@ const Feedback: FC = () => {
           </div>
           <div className={feedbackStyle.FeedbackContainer}>
             <div className={feedbackStyle.FeedbackTextContainer}>
-              {selectedAvatar === 1 && (
-                <p>
-                  Firas Firas Firas Firas Firas Firas Firas Firas Firas Firas
-                  Firas Firas Firas Firas Firas Firas Firas Firas Firas Firas
-                  Firas Firas Firas Firas Firas Firas Firas Firas Firas Firas
-                  Firas Firas Firas Firas Firas Firas Firas Firas Firas Firas
-                  Firas Firas Firas Firas Firas Firas Firas Firas Firas Firas
-                  Firas Firas Firas Firas Firas Firas Firas Firas Firas Firas
-                  Firas Firas Firas Firas Firas Firas Firas Firas Firas Firas
-                  Firas Firas Firas Firas Firas Firas Firas Firas Firas Firas
-                </p>
-              )}
-              {selectedAvatar === 2 && (
-                <p>
-                  The Is The Is The Is The Is The Is The Is The Is The Is The
-                  Is The Is The Is The Is The Is The Is The Is The Is The Is The
-                  Is The Is The Is The Is The Is The Is The Is The Is The Is The
-                  Is The Is The Is The Is The Is The Is The Is The Is The Is The
-                  Is The Is The Is The Is The Is The Is The Is The Is The Is The
-                  Is The Is The Is The Is The Is The Is The Is The Is The Is The
-                  Is The Is The Is The Is The Is The Is The Is The Is The Is The
-                  Is The Is The Is
-                </p>
-              )}
-              {selectedAvatar === 3 && (
-                <p>
-                  Best Best Best Best Best Best Best Best Best Best Best Best
-                  Best Best Best Best Best Best Best Best Best Best Best Best
-                  Best Best Best Best Best Best Best Best Best Best Best Best
-                  Best Best Best Best Best Best Best Best Best Best Best Best
-                  Best Best Best Best Best Best Best Best Best Best Best Best
-                  Best Best Best Best Best Best Best Best Best Best Best Best
-                  Best Best Best Best Best Best Best Best
-                </p>
-              )}
+              <p
+                className={
+                  selectedAvatar === 1
+                    ? feedbackStyle.Active
+                    : feedbackStyle.Hidden
+                }
+              >
+                Firas Firas Firas Firas Firas Firas Firas Firas Firas Firas
+                Firas Firas Firas Firas Firas Firas Firas Firas Firas Firas
+                Firas Firas Firas Firas Firas Firas Firas Firas Firas Firas
+                Firas Firas Firas Firas Firas Firas Firas Firas Firas Firas
+              </p>
+              <p
+                className={
+                  selectedAvatar === 2
+                    ? feedbackStyle.Active
+                    : feedbackStyle.Hidden
+                }
+              >
+                The Is The Is The Is The Is The Is The Is The Is The Is The Is
+                The Is The Is The Is The Is The Is The Is The Is The Is The Is
+                The Is The Is The Is The Is The Is The Is The Is The Is The Is
+                The Is The Is The Is The Is The Is The Is The Is The Is The Is
+              </p>
+              <p
+                className={
+                  selectedAvatar === 3
+                    ? feedbackStyle.Active
+                    : feedbackStyle.Hidden
+                }
+              >
+                Best Best Best Best Best Best Best Best Best Best Best Best Best
+                Best Best Best Best Best Best Best Best Best Best Best Best Best
+                Best Best Best Best Best Best Best Best Best Best Best Best Best
+                Best Best Best Best Best Best Best Best Best
+              </p>
             </div>
             <div className={feedbackStyle.FeedbackButtonContainer}>
               <button onClick={handlePrevAvatar}>

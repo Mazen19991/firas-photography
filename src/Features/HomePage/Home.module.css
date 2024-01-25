@@ -57,6 +57,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .ContactButtonText {
@@ -96,45 +97,44 @@
   gap: 1rem;
 }
 
-.IconLinkF {
+.IconLinkF,
+.IconLinkT,
+.IconLinkI {
   text-decoration: none;
   color: black;
+  transition: color 0.3s ease; /* Add a transition for the color property */
 }
 
 .IconLinkF:hover {
   color: royalblue;
   cursor: pointer;
 }
-.IconLinkF:active {
-  color: black;
-  cursor: pointer;
-}
-.IconLinkT {
-  text-decoration: none;
-  color: black;
-}
 
 .IconLinkT:hover {
   color: deepskyblue;
   cursor: pointer;
-}
-.IconLinkT:active {
-  color: black;
-  cursor: pointer;
-}
-.IconLinkI {
-  text-decoration: none;
-  color: black;
 }
 
 .IconLinkI:hover {
   color: magenta;
   cursor: pointer;
 }
-.IconLinkI:active{
+
+.IconLinkF:active {
   color: black;
   cursor: pointer;
 }
+
+.IconLinkT:active {
+  color: black;
+  cursor: pointer;
+}
+
+.IconLinkI:active {
+  color: black;
+  cursor: pointer;
+}
+
 
 .WatermarkContainer {
   display: flex;

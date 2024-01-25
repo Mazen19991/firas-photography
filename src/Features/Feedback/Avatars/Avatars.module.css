@@ -1,7 +1,20 @@
+/* avatarStyle.css */
+
 .AvatarContainer {
   border-radius: 50%;
   width: 6.5rem;
   padding: 0;
   margin: 0;
   font-family: 'Sarabun', sans-serif;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Added for transition */
+}
+
+.AvatarContainer:hover {
+  transform: scale(1.1); /* Adjust the scale factor as needed */
+  opacity: 0.7; /* Adjust the opacity value as needed */
+}
+
+/* Add the following styles for badge transition */
+.AvatarContainer:hover .MuiBadge-dot {
+  opacity: 0.7; /* Adjust the opacity value as needed */
 }

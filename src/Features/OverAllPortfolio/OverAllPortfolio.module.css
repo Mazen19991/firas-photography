@@ -1,0 +1,90 @@
+.BackContainer{
+  height: 100vh;
+  position: absolute;
+  z-index: -10;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #f7f5f1;
+
+}
+
+.Container {
+  z-index: 0;
+  min-height: 100%;
+  background-color: black;
+  overflow: hidden;
+  font-family: "Sarabun", sans-serif;
+  box-sizing: border-box;
+  padding: 1rem;
+  animation: slideIn 0.5s ease-in-out; /* Added slideIn animation */
+}
+
+.Container.visible {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.Container:not(.visible) {
+  animation: slideOut 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.TextContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.titleContainer p {
+  color: #f7f5f1;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: normal;
+  margin: 0;
+}
+
+.subTitleContainer h1 {
+  margin: 0;
+  font-weight: 700;
+  line-height: normal;
+  color: #f7f5f1;
+}
+.carouselContainer {
+  margin-bottom: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.LinkContainer {
+  text-decoration: none;
+  color: rgb(247, 245, 241, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-top: 0.5rem;
+  transition: color 0.2s ease-in-out;
+}
+.LinkContainer:hover {
+  text-decoration: none;
+  color: #f7f5f1;
+}
+.LinkContainer:active {
+  text-decoration: none;
+  color: #f7f5f1;
+}

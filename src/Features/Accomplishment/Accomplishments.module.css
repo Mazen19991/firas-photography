@@ -5,22 +5,31 @@
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   font-family: "Sarabun", sans-serif;
 }
-.Container button {
-  color: black;
+
+.ContainerLink{
   background-color: #d8b880;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
   font-size: 40px;
   font-weight: 700;
   line-height: normal;
   border: 0;
   font-family: "Sarabun", sans-serif;
 }
-.Container button:active {
+
+.ContainerLink:active {
   background-color: #d9c094;
   border-right: 1px solid #c8a15c;
   border-bottom: 1px solid #c8a15c;
   font-family: "Sarabun", sans-serif;
+  color: black;
 }
-.Container button:hover {
+
+.ContainerLink:hover {
   cursor: pointer;
   font-family: "Sarabun", sans-serif;
+  color: black;
 }

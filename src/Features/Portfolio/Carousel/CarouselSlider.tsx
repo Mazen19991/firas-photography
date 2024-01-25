@@ -1,42 +1,54 @@
-import React, { FC } from "react";
+// CarouselSlider.jsx
+
+import React, { useState, useEffect, FC } from "react";
 import carouselStyle from "./CarouselSlider.module.css";
 import image1 from "../../../Assets/Website Images/WoodsLake.jpg";
 import image2 from "../../../Assets/Website Images/AP7A1471.jpg";
 import image3 from "../../../Assets/Website Images/AP7A3524.jpg";
-import { Carousel } from "react-carousel-minimal";
+import Slider from "react-slick";
 
-const CarouselSlider: FC = (Images) => {
-  const data = [{ image: image1 }, { image:image2 }, { image:image3  }];
+interface CarouselSliderProps {
+  mediaChange: boolean;
+}
 
-  const slideNumberStyle = {
-    fontSize: "20px",
-    fontWeight: "bold",
+const CarouselSlider: FC<CarouselSliderProps> = (mediaChange) => {
+  let images: string[] = [];
+
+  if (!mediaChange.mediaChange) {
+    images = [image1, image2, image3, image1];
+  } else if (mediaChange.mediaChange) {
+    images = [image3, image2, image1];
+  }
+  const settings = {
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 3000,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    arrows: false,
+    dots: false,
+    pauseOnHover: true,
+    variableWidth: true,
+    draggable: true,
+    swipeToSlide: true,
+    pauseOnFocus: true,
+    centerMode: true,
   };
   return (
-    <div
-      style={{
-        padding: "0 20px",
-      }}
-      className={carouselStyle.carouselContainer}
-    >
-      <Carousel
-        data={data}
-        time={5000}
-        width="100%"
-        radius="10px"
-        slideNumber={true}
-        slideNumberStyle={slideNumberStyle}
-        captionPosition="bottom"
-        automatic={true}
-        dots={true}
-        
-        slideImageFit="cover"
-        style={{
-          textAlign: "center",
-          maxWidth: "100%",
-          maxHeight: "100%",
-        }}
-      />
+    <div className={carouselStyle.carouselContainer}>
+      <Slider {...settings}>
+        {images.map((image, index) => (
+          <div key={index} className={carouselStyle.carouselSlide}>
+            <img
+              src={image}
+              alt={`Slide ${index + 1}`}
+              className={carouselStyle.carouselImage}
+            />
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 };

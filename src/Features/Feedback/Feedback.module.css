@@ -93,6 +93,10 @@
   border: 2px solid rgb(243, 241, 238);
   cursor: pointer;
   z-index: 2;
+  transition: transform 0.3s ease-in-out /* Added for transition */
+}
+.FeedbackButtonContainer button:hover {
+  transform: scale(1.1); /* Adjust the scale factor as needed */
 }
 
 .WatermarkContainer {
@@ -113,4 +117,17 @@
 
 .WatermarkRectangle {
   width: 4%;
+}
+
+/* Add these styles to your CSS file */
+
+.Active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.Hidden {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
 }

@@ -1,17 +1,25 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import droneStyle from "./Drone.module.css";
 import watermark from "../../Assets/FirasMultipleWatermark7.png";
 import bike1 from "../../Assets/Website Images/Bike1.jpg";
 import bike2 from "../../Assets/Website Images/Bike2.jpg";
 
 const Drone = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    // Navigate to another page
+    navigate("/accomplishment-portfolio?type=Drone Collection"); // Replace "/your-target-page" with the actual path
+  };
+
   return (
     <div className={droneStyle.Container}>
       <div className={droneStyle.InnerContainer}>
         <div className={droneStyle.TextContainer}>
           <h1>DRONE VIDEOGRAPHER</h1>
           <div>
-            <button className={droneStyle.Contactbutton}>
+            <button className={droneStyle.Contactbutton} onClick={handleButtonClick}>
               <p className={droneStyle.ContactButtonText}>See More</p>
             </button>
           </div>

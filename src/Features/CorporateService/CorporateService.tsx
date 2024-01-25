@@ -7,14 +7,22 @@ import watermark5 from "../../Assets/Watermark5-Shapes.png";
 import watermark6 from "../../Assets/Watermark6-Shapes.png";
 
 const CorporateService = () => {
+
+  const HandleContactButton = () => {
+    window.open("https://api.whatsapp.com/send?phone=971505752859");
+  };
+  
   return (
-    <div className={corporateServiceStyle.Container}>
+    <div className={corporateServiceStyle.Container} id="Services">
       <div className={corporateServiceStyle.InnerContainer}>
         <div className={corporateServiceStyle.TextContainer}>
           <p>CORPORATE SERVICE</p>
           <h1>I can make your business look and feel professional.</h1>
           <div>
-            <button className={corporateServiceStyle.Contactbutton}>
+            <button
+              className={corporateServiceStyle.Contactbutton}
+              onClick={HandleContactButton}
+            >
               <p className={corporateServiceStyle.ContactButtonText}>
                 CONTACT ME
               </p>

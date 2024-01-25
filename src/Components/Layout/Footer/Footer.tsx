@@ -11,7 +11,7 @@ const Footer: FC = () => {
         <div className={footerStyle.topContainer}>
           <a
             href="https://www.facebook.com"
-            className={footerStyle.IconLink}
+            className={footerStyle.IconLinkF}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -19,7 +19,7 @@ const Footer: FC = () => {
           </a>
           <a
             href="https://twitter.com"
-            className={footerStyle.IconLink}
+            className={footerStyle.IconLinkT}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -27,7 +27,7 @@ const Footer: FC = () => {
           </a>
           <a
             href="https://www.instagram.com"
-            className={footerStyle.IconLink}
+            className={footerStyle.IconLinkI}
             target="_blank"
             rel="noopener noreferrer"
           >

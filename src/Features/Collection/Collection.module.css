@@ -52,20 +52,6 @@
   gap: 0.5rem;
   overflow: hidden;
 }
-
-.CollectionTitlesContainerFirst a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #f7f5f1;
-  overflow: hidden;
-}
-.CollectionTitlesContainerFirst a:active {
-  text-decoration: underline;
-  color: #f7f5f1;
-}
-
 .CollectionTitlesContainerSecond {
   min-height: 15%;
   background-color: black;
@@ -78,20 +64,6 @@
   ); /* Responsive grid */
   overflow: hidden;
 }
-
-.CollectionTitlesContainerSecond a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #f7f5f1;
-  overflow: hidden;
-}
-.CollectionTitlesContainerSecond a:active {
-  text-decoration: underline;
-  color: #f7f5f1;
-}
-
 .CollectionTitlesContainerFirst a h1 {
   font-family: "Sarabun", sans-serif;
   font-weight: 700;
@@ -105,3 +77,37 @@
   font-size: 40px;
   margin: 0;
 }
+
+/* Collection.module.css */
+
+.CollectionTitlesContainerFirst a,
+.CollectionTitlesContainerSecond a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  color: #f7f5f1;
+  overflow: hidden;
+}
+
+.CollectionTitlesContainerFirst a::before,
+.CollectionTitlesContainerSecond a::before {
+  content: "";
+  position: absolute;
+  border-radius: 5px;
+  width: 100%;
+  height: 0.25rem; /* Height of the underline */
+  bottom: 1rem;
+  left: 0;
+  background-color: #f7f5f1;
+  transform-origin: right;
+  transform: scaleX(0); /* Initial state: no width */
+  transition: transform 0.1s ease-in-out; /* Add transition property */
+}
+
+.CollectionTitlesContainerFirst a:active::before,
+.CollectionTitlesContainerSecond a:active::before {
+  transform: scaleX(1); /* Full width on hover or active state */
+}
+
